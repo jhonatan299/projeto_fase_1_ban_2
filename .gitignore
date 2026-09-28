@@ -1,0 +1,21 @@
+# Build artifacts
+target/
+bin/
+
+# Dependencies
+lib/
+
+# IDE and Editor files
+.vscode/
+.idea/
+*.iml
+.project
+.classpath
+.settings/
+
+# Temporary and log files
+*.log
+*.txt
+
+# Documentation drafts
+*.docx
