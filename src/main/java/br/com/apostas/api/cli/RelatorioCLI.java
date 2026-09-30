@@ -128,17 +128,17 @@ public class RelatorioCLI {
             return;
         }
 
-        System.out.println("============================================================================================");
-        System.out.printf("%-18s | %-22s | %-12s | %-10s | %-10s | %-10s%n",
-                "Esporte", "Tipo Mercado", "Total Opcoes", "Odd Media", "Odd Minima", "Odd Maxima");
-        System.out.println("--------------------------------------------------------------------------------------------");
+        System.out.println("==============================================================================================================================");
+        System.out.printf("%-18s | %-38s | %-12s | %-12s | %-12s | %-12s%n",
+                "Esporte", "Tipo de Mercado", "Total Opcoes", "Odd Media", "Odd Minima", "Odd Maxima");
+        System.out.println("------------------------------------------------------------------------------------------------------------------------------");
 
         for (Map<String, Object> r : dados) {
-            System.out.printf("%-18s | %-22s | %-12s | %-10.2f | %-10.2f | %-10.2f%n",
+            System.out.printf("%-18s | %-38s | %-12s | %-12.2f | %-12.2f | %-12.2f%n",
                     r.get("nome_esporte"), r.get("tipo_mercado"), r.get("total_opcoes"),
                     (BigDecimal) r.get("odd_media"), (BigDecimal) r.get("odd_minima"), (BigDecimal) r.get("odd_maxima"));
         }
-        System.out.println("============================================================================================");
+        System.out.println("==============================================================================================================================");
     }
 
     private void rankingLucro() {
