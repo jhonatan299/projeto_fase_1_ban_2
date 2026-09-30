@@ -50,7 +50,7 @@ public class MainMenuCLI {
             System.out.println("+----------------------------------------------------------------+");
             System.out.println("|  PROCESSOS DE NEGOCIO & RELATORIOS                             |");
             System.out.println("|  9 - Registrar Participacao em Evento                          |");
-            System.out.println("| 10 - Efetuar / Liquidar Aposta (Transacao ACID)                |");
+            System.out.println("| 10 - Efetuar / Liquidar Aposta                                 |");
             System.out.println("| 11 - Relatorios Analiticos                                     |");
             System.out.println("+----------------------------------------------------------------+");
             System.out.println("|  0 - Sair do Sistema                                           |");

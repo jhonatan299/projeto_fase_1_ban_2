@@ -43,7 +43,7 @@ public class EfetuarApostaCLI {
             System.out.println("\n========================================================");
             System.out.println("     SISTEMA TRANSACIONAL - EFETUAR & LIQUIDAR APOSTAS  ");
             System.out.println("========================================================");
-            System.out.println(" 1 - Realizar Nova Aposta (Simples ou Multipla / ACID)");
+            System.out.println(" 1 - Realizar Nova Aposta (Simples ou Multipla)");
             System.out.println(" 2 - Consultar Bilhete / Itens de uma Aposta");
             System.out.println(" 3 - Liquidar Aposta (Marcar como GANHA ou PERDIDA)");
             System.out.println(" 0 - Voltar ao menu principal");
@@ -66,7 +66,7 @@ public class EfetuarApostaCLI {
     }
 
     private void realizarAposta(Scanner scanner) {
-        System.out.println("\n--- [ NOVA APOSTA (TRANSACAO ATOMICA) ] ---");
+        System.out.println("\n--- [ NOVA APOSTA ] ---");
         int codusuario = ConsoleUtils.lerInteiro(scanner, "Informe o ID do Usuario apostador (codusuario): ");
 
         Usuario usuario;

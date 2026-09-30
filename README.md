@@ -45,7 +45,7 @@ Ao iniciar, a aplicação exibe o menu principal no console:
  7. Gerenciar Opções de Aposta (Cotações)
  8. Gerenciar Apostas & Liquidação
  9. Gerenciar Participações de Competidores (N:N)
-10. Efetuar Nova Aposta (Transação Atômica ACID)
+10. Efetuar Nova Aposta
 11. Relatórios e Estatísticas Analíticas (5 Relatórios)
  0. Sair
 ==================================================
