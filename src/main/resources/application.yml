@@ -27,3 +27,8 @@ spring:
         jdbc:
           lob:
             non_contextual_creation: true
+
+# Desativa todos os logs internos (Spring Boot, HikariCP, Hibernate) para tela limpa
+logging:
+  level:
+    root: OFF

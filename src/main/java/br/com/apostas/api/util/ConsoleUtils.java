@@ -73,11 +73,14 @@ public class ConsoleUtils {
     public static LocalDateTime lerDataHora(Scanner scanner, String prompt) {
         String[] patterns = {
                 "yyyy-MM-dd HH:mm",
+                "yyyy/MM/dd HH:mm",
                 "yyyy-MM-dd'T'HH:mm",
                 "yyyy-MM-dd'T'HH:mm:ss",
                 "yyyy-MM-dd HH:mm:ss",
+                "yyyy/MM/dd HH:mm:ss",
                 "dd/MM/yyyy HH:mm",
-                "dd/MM/yyyy HH:mm:ss"
+                "dd/MM/yyyy HH:mm:ss",
+                "dd-MM-yyyy HH:mm"
         };
 
         while (true) {
@@ -101,7 +104,7 @@ public class ConsoleUtils {
     }
 
     public static java.time.LocalDate lerData(Scanner scanner, String prompt, boolean obrigatorio) {
-        String[] patterns = {"yyyy-MM-dd", "dd/MM/yyyy"};
+        String[] patterns = {"yyyy-MM-dd", "yyyy/MM/dd", "dd/MM/yyyy", "dd-MM-yyyy"};
 
         while (true) {
             System.out.print(prompt);

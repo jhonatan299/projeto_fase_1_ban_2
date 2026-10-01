@@ -61,17 +61,13 @@ public class EventoEsportivoCLI {
         System.out.print("Descricao do Evento (ex: Grand Prix de Monaco, Rodada 32 - Real Madrid x Barca): ");
         String descricao = scanner.nextLine().trim();
 
-        System.out.print("Data e Hora (AAAA-MM-DD HH:MM): ");
-        String dtStr = scanner.nextLine().trim();
-        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
-        LocalDateTime dtHora = LocalDateTime.parse(dtStr, dtf);
+        LocalDateTime dtHora = ConsoleUtils.lerDataHora(scanner, "Data e Hora (ex: 2026-10-01 16:00 ou 01/10/2026 16:00): ");
 
         System.out.print("Status (AGENDADO, AO_VIVO, FINALIZADO, CANCELADO) [Padrao: AGENDADO]: ");
         String status = scanner.nextLine().trim();
         if (status.isEmpty()) status = "AGENDADO";
 
-        System.out.print("ID da Competicao vinculada (codcompeticao): ");
-        int codcompeticao = Integer.parseInt(scanner.nextLine().trim());
+        int codcompeticao = ConsoleUtils.lerInteiro(scanner, "ID da Competicao vinculada (codcompeticao): ");
 
         EventoEsportivo ev = EventoEsportivo.builder()
                 .descricao(descricao.isEmpty() ? null : descricao)
