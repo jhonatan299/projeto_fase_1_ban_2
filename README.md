@@ -25,36 +25,3 @@ mvn spring-boot:run
 
 Ou abra o projeto diretamente em qualquer IDE (IntelliJ IDEA, VS Code ou Eclipse) e execute a classe:
 `br.com.apostas.api.ProjetoApi1Application`
-
----
-
-## Menu Interativo do Terminal (CLI)
-
-Ao iniciar, a aplicacao exibe o menu principal no console:
-
-```
-================================================================================
-   SISTEMA DE APOSTAS ESPORTIVAS - CONSOLE CLI (SPRING BOOT 3 + DATA JPA)       
-================================================================================
-
-+----------------------------------------------------------------+
-|        SISTEMA DE APOSTAS ESPORTIVAS - MENU PRINCIPAL          |
-+----------------------------------------------------------------+
-|  ENTIDADES (CRUD)                                              |
-|  1 - Gerenciar Usuarios                                        |
-|  2 - Gerenciar Esportes                                        |
-|  3 - Gerenciar Competicoes                                     |
-|  4 - Gerenciar Competidores                                    |
-|  5 - Gerenciar Eventos Esportivos                              |
-|  6 - Gerenciar Mercados                                        |
-|  7 - Gerenciar Opcoes de Aposta                                |
-|  8 - Gerenciar Apostas                                         |
-+----------------------------------------------------------------+
-|  PROCESSOS DE NEGOCIO & RELATORIOS                             |
-|  9 - Registrar Participacao em Evento                          |
-| 10 - Efetuar / Liquidar Aposta                                 |
-| 11 - Relatorios Analiticos                                     |
-+----------------------------------------------------------------+
-|  0 - Sair do Sistema                                           |
-+----------------------------------------------------------------+
-```
