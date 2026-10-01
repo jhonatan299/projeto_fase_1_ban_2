@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict critZmcN1NaBru6urrDysd9fjdP6EVOG3M3lZ887zFaDvjBeF9eOX1wYxhih28T
+\restrict lrrWUnmL2ydiSdeNfmAJ208f4sa2uHZsgxztlMzn81qdXpxSTBhaUaeEKM78FpW
 
 -- Dumped from database version 18.6
 -- Dumped by pg_dump version 18.6
@@ -676,7 +676,7 @@ COPY public.opcao_aposta (codopcao, resultado, odd, descricao, codmercado) FROM 
 36	Real Madrid Vence	2.50	Partido de UCL	4
 39	Real Madrid Ganha	1.60	Semifinal UCL	6
 46	Real Madrid Ganha	1.65	UCL Semifinal	18
-47	Real Madrid Empate	2.00	UCL Semifinal	18
+48	Real Madrid Empate	2.00	UCL Semifinal	18
 \.
 
 
@@ -711,8 +711,6 @@ COPY public.participacao (codevento, codcompetidor) FROM stdin;
 12	17
 13	28
 13	29
-14	5
-14	30
 \.
 
 
@@ -757,7 +755,7 @@ SELECT pg_catalog.setval('public.competicao_codcompeticao_seq', 10, true);
 -- Name: competidor_codcompetidor_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.competidor_codcompetidor_seq', 30, true);
+SELECT pg_catalog.setval('public.competidor_codcompetidor_seq', 31, true);
 
 
 --
@@ -792,7 +790,7 @@ SELECT pg_catalog.setval('public.mercado_codmercado_seq', 18, true);
 -- Name: opcao_aposta_codopcao_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.opcao_aposta_codopcao_seq', 47, true);
+SELECT pg_catalog.setval('public.opcao_aposta_codopcao_seq', 48, true);
 
 
 --
@@ -1023,5 +1021,5 @@ ALTER TABLE ONLY public.participacao
 -- PostgreSQL database dump complete
 --
 
-\unrestrict critZmcN1NaBru6urrDysd9fjdP6EVOG3M3lZ887zFaDvjBeF9eOX1wYxhih28T
+\unrestrict lrrWUnmL2ydiSdeNfmAJ208f4sa2uHZsgxztlMzn81qdXpxSTBhaUaeEKM78FpW
 
