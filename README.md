@@ -1,4 +1,4 @@
-# Projeto de Banco de Dados — Sistema de Apostas Esportivas
+# Projeto - Fase 1 — Sistema de Apostas Esportivas
 
 Aplicacao desenvolvida com **Spring Boot 3**, **Spring Data JPA**, **PostgreSQL** e **Lombok**, operando **100% em modo Console / Terminal (CLI)**, sem servidor web HTTP ou endpoints REST.
 
