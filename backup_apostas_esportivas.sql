@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
--- \restrict pswk0IoKOJblq6ifImM7XOvt4oZbAoDUpkSYaRjPhHdT8jat2asAKwUXdpKBZ0o
+\restrict critZmcN1NaBru6urrDysd9fjdP6EVOG3M3lZ887zFaDvjBeF9eOX1wYxhih28T
 
 -- Dumped from database version 18.6
 -- Dumped by pg_dump version 18.6
@@ -455,265 +455,295 @@ ALTER TABLE ONLY public.usuario ALTER COLUMN codusuario SET DEFAULT nextval('pub
 -- Data for Name: aposta; Type: TABLE DATA; Schema: public; Owner: -
 --
 
-INSERT INTO public.aposta VALUES (2, 'PERDIDA', '2026-09-13 15:00:00', 50.00, 0.00, 2);
-INSERT INTO public.aposta VALUES (3, 'GANHA', '2026-09-13 16:45:00', 50.00, 238.00, 3);
-INSERT INTO public.aposta VALUES (4, 'PENDENTE', '2026-10-01 10:20:00', 150.00, NULL, 5);
-INSERT INTO public.aposta VALUES (5, 'PENDENTE', '2026-10-02 14:10:00', 80.00, NULL, 6);
-INSERT INTO public.aposta VALUES (6, 'PENDENTE', '2026-10-03 09:40:00', 200.00, NULL, 7);
-INSERT INTO public.aposta VALUES (7, 'PENDENTE', '2026-10-04 11:15:00', 100.00, NULL, 9);
-INSERT INTO public.aposta VALUES (9, 'PENDENTE', '2026-10-05 18:00:00', 50.00, NULL, 11);
-INSERT INTO public.aposta VALUES (10, 'CANCELADA', '2026-09-20 12:00:00', 100.00, 100.00, 13);
-INSERT INTO public.aposta VALUES (8, 'CANCELADA', '2026-10-04 16:30:00', 60.00, 60.00, 10);
-INSERT INTO public.aposta VALUES (11, 'PENDENTE', '2026-09-21 04:28:00.832785', 10.00, NULL, 1);
-INSERT INTO public.aposta VALUES (12, 'PENDENTE', '2026-09-21 04:29:06.55661', 10.00, NULL, 2);
-INSERT INTO public.aposta VALUES (13, 'PENDENTE', '2026-09-21 04:41:53.594029', 50.00, NULL, 1);
-INSERT INTO public.aposta VALUES (14, 'PENDENTE', '2026-09-21 05:39:46.64972', 11.00, NULL, 1);
-INSERT INTO public.aposta VALUES (1, 'PERDIDA', '2026-09-14 18:30:00', 100.00, 0.00, 1);
-INSERT INTO public.aposta VALUES (15, 'PENDENTE', '2026-09-21 06:36:42.123473', 10.00, NULL, 1);
+COPY public.aposta (codaposta, status, data_hora, valor, valor_retorno, codusuario) FROM stdin;
+2	PERDIDA	2026-09-13 15:00:00	50.00	0.00	2
+3	GANHA	2026-09-13 16:45:00	50.00	238.00	3
+4	PENDENTE	2026-10-01 10:20:00	150.00	\N	5
+5	PENDENTE	2026-10-02 14:10:00	80.00	\N	6
+6	PENDENTE	2026-10-03 09:40:00	200.00	\N	7
+7	PENDENTE	2026-10-04 11:15:00	100.00	\N	9
+9	PENDENTE	2026-10-05 18:00:00	50.00	\N	11
+8	CANCELADA	2026-10-04 16:30:00	60.00	60.00	10
+11	PENDENTE	2026-09-21 04:28:00.832785	10.00	\N	1
+12	PENDENTE	2026-09-21 04:29:06.55661	10.00	\N	2
+13	PENDENTE	2026-09-21 04:41:53.594029	50.00	\N	1
+14	PENDENTE	2026-09-21 05:39:46.64972	11.00	\N	1
+15	PENDENTE	2026-09-21 06:36:42.123473	10.00	\N	1
+16	PENDENTE	2026-09-29 22:19:11.276129	10.00	\N	1
+17	PENDENTE	2026-09-29 23:14:33.919736	10.00	\N	1
+10	PERDIDA	2026-09-20 12:00:00	100.00	0.00	13
+18	PENDENTE	2026-10-01 13:28:45.10795	10.00	\N	1
+19	PENDENTE	2026-10-01 13:38:28.078853	19.00	\N	1
+20	GANHA	2026-10-01 14:24:45.342428	15.00	24.75	1
+\.
 
 
 --
 -- Data for Name: competicao; Type: TABLE DATA; Schema: public; Owner: -
 --
 
-INSERT INTO public.competicao VALUES (1, 'Brasileirao Serie A', NULL, '2026-04-10', '2026-12-06', 1);
-INSERT INTO public.competicao VALUES (2, 'Champions League', NULL, '2026-09-15', '2027-05-29', 1);
-INSERT INTO public.competicao VALUES (3, 'Copa do Brasil', NULL, '2026-02-20', '2026-10-25', 1);
-INSERT INTO public.competicao VALUES (4, 'NBA Regular Season', NULL, '2026-10-20', '2027-04-15', 2);
-INSERT INTO public.competicao VALUES (5, 'ATP Masters 1000', NULL, '2026-08-01', '2026-11-15', 3);
-INSERT INTO public.competicao VALUES (6, 'Superliga de Volei', NULL, '2026-10-01', '2027-04-30', 4);
-INSERT INTO public.competicao VALUES (7, 'UFC Fight Night', NULL, '2026-01-01', '2026-12-31', 5);
-INSERT INTO public.competicao VALUES (8, 'Formula 1 - Temporada', NULL, '2026-03-01', '2026-11-30', 6);
-INSERT INTO public.competicao VALUES (9, 'IEM CS:GO Major', NULL, '2026-10-10', '2026-10-28', 7);
-INSERT INTO public.competicao VALUES (10, 'Copa do Mundo de Rugby 2026', 'Franca', '2026-10-01', '2026-11-30', 9);
+COPY public.competicao (codcompeticao, nome, pais, data_inicio, data_fim, codesporte) FROM stdin;
+1	Brasileirao Serie A	\N	2026-04-10	2026-12-06	1
+2	Champions League	\N	2026-09-15	2027-05-29	1
+3	Copa do Brasil	\N	2026-02-20	2026-10-25	1
+4	NBA Regular Season	\N	2026-10-20	2027-04-15	2
+5	ATP Masters 1000	\N	2026-08-01	2026-11-15	3
+6	Superliga de Volei	\N	2026-10-01	2027-04-30	4
+7	UFC Fight Night	\N	2026-01-01	2026-12-31	5
+8	Formula 1 - Temporada	\N	2026-03-01	2026-11-30	6
+9	IEM CS:GO Major	\N	2026-10-10	2026-10-28	7
+10	Copa do Mundo de Rugby 2026	Franca	2026-10-01	2026-11-30	9
+\.
 
 
 --
 -- Data for Name: competidor; Type: TABLE DATA; Schema: public; Owner: -
 --
 
-INSERT INTO public.competidor VALUES (1, 'Flamengo', 'TIME');
-INSERT INTO public.competidor VALUES (2, 'Palmeiras', 'TIME');
-INSERT INTO public.competidor VALUES (3, 'Corinthians', 'TIME');
-INSERT INTO public.competidor VALUES (4, 'Sao Paulo', 'TIME');
-INSERT INTO public.competidor VALUES (5, 'Real Madrid', 'TIME');
-INSERT INTO public.competidor VALUES (6, 'Manchester City', 'TIME');
-INSERT INTO public.competidor VALUES (7, 'Bayern de Munique', 'TIME');
-INSERT INTO public.competidor VALUES (8, 'PSG', 'TIME');
-INSERT INTO public.competidor VALUES (9, 'Los Angeles Lakers', 'TIME');
-INSERT INTO public.competidor VALUES (10, 'Boston Celtics', 'TIME');
-INSERT INTO public.competidor VALUES (11, 'Golden State Warriors', 'TIME');
-INSERT INTO public.competidor VALUES (12, 'Chicago Bulls', 'TIME');
-INSERT INTO public.competidor VALUES (13, 'Carlos Alcaraz', 'INDIVIDUAL');
-INSERT INTO public.competidor VALUES (14, 'Novak Djokovic', 'INDIVIDUAL');
-INSERT INTO public.competidor VALUES (15, 'Jannik Sinner', 'INDIVIDUAL');
-INSERT INTO public.competidor VALUES (16, 'Sada Cruzeiro', 'TIME');
-INSERT INTO public.competidor VALUES (17, 'Minas Volei', 'TIME');
-INSERT INTO public.competidor VALUES (18, 'Alex Poatan', 'INDIVIDUAL');
-INSERT INTO public.competidor VALUES (19, 'Israel Adesanya', 'INDIVIDUAL');
-INSERT INTO public.competidor VALUES (20, 'Islam Makhachev', 'INDIVIDUAL');
-INSERT INTO public.competidor VALUES (21, 'Max Verstappen', 'INDIVIDUAL');
-INSERT INTO public.competidor VALUES (22, 'Lewis Hamilton', 'INDIVIDUAL');
-INSERT INTO public.competidor VALUES (23, 'Furia Esports', 'TIME');
-INSERT INTO public.competidor VALUES (24, 'Natus Vincere', 'TIME');
-INSERT INTO public.competidor VALUES (25, 'Jhonatan', 'INDIVIDUAL');
+COPY public.competidor (codcompetidor, nome, tipo) FROM stdin;
+1	Flamengo	TIME
+2	Palmeiras	TIME
+3	Corinthians	TIME
+4	Sao Paulo	TIME
+5	Real Madrid	TIME
+6	Manchester City	TIME
+7	Bayern de Munique	TIME
+8	PSG	TIME
+9	Los Angeles Lakers	TIME
+10	Boston Celtics	TIME
+11	Golden State Warriors	TIME
+12	Chicago Bulls	TIME
+13	Carlos Alcaraz	INDIVIDUAL
+14	Novak Djokovic	INDIVIDUAL
+15	Jannik Sinner	INDIVIDUAL
+16	Sada Cruzeiro	TIME
+17	Minas Volei	TIME
+18	Alex Poatan	INDIVIDUAL
+19	Israel Adesanya	INDIVIDUAL
+20	Islam Makhachev	INDIVIDUAL
+21	Max Verstappen	INDIVIDUAL
+22	Lewis Hamilton	INDIVIDUAL
+23	Furia Esports	TIME
+24	Natus Vincere	TIME
+25	Jhonatan	INDIVIDUAL
+26	Gremio	TIME
+27	Internacional	TIME
+28	All Blacks	TIME
+29	Springboks	TIME
+30	Barcelona	TIME
+\.
 
 
 --
 -- Data for Name: esporte; Type: TABLE DATA; Schema: public; Owner: -
 --
 
-INSERT INTO public.esporte VALUES (7, 'CS:GO (Esports)', 2);
-INSERT INTO public.esporte VALUES (8, 'Futebol Americano', 2);
-INSERT INTO public.esporte VALUES (1, 'Futebol', 2);
-INSERT INTO public.esporte VALUES (2, 'Basquete', 2);
-INSERT INTO public.esporte VALUES (3, 'Tenis', 2);
-INSERT INTO public.esporte VALUES (4, 'Volei', 2);
-INSERT INTO public.esporte VALUES (5, 'MMA', 2);
-INSERT INTO public.esporte VALUES (6, 'Formula 1', 20);
-INSERT INTO public.esporte VALUES (9, 'Rugby', 15);
+COPY public.esporte (codesporte, nome, max_competidores_evento) FROM stdin;
+7	CS:GO (Esports)	2
+8	Futebol Americano	2
+1	Futebol	2
+2	Basquete	2
+3	Tenis	2
+4	Volei	2
+5	MMA	2
+6	Formula 1	20
+9	Rugby	15
+\.
 
 
 --
 -- Data for Name: evento_esportivo; Type: TABLE DATA; Schema: public; Owner: -
 --
 
-INSERT INTO public.evento_esportivo VALUES (1, '2026-10-15 16:00:00', 'AGENDADO', 1, 'Rodada 26 - Flamengo x Palmeiras');
-INSERT INTO public.evento_esportivo VALUES (2, '2026-09-13 18:30:00', 'FINALIZADO', 1, 'Rodada 25 - Corinthians x Sao Paulo');
-INSERT INTO public.evento_esportivo VALUES (3, '2026-10-20 16:00:00', 'AGENDADO', 2, 'Fase de Grupos - Real Madrid x Manchester City');
-INSERT INTO public.evento_esportivo VALUES (4, '2026-10-21 16:00:00', 'AGENDADO', 2, 'Fase de Grupos - PSG x Bayern de Munique');
-INSERT INTO public.evento_esportivo VALUES (5, '2026-09-25 20:00:00', 'FINALIZADO', 3, 'Oitavas de Final - Gremio x Internacional');
-INSERT INTO public.evento_esportivo VALUES (6, '2026-11-05 21:00:00', 'AGENDADO', 4, 'Temporada Regular - Lakers x Celtics');
-INSERT INTO public.evento_esportivo VALUES (7, '2026-09-10 21:00:00', 'FINALIZADO', 4, 'Temporada Regular - Warriors x Bulls');
-INSERT INTO public.evento_esportivo VALUES (8, '2026-10-18 14:00:00', 'AGENDADO', 5, 'Final Masculina - Carlos Alcaraz x Novak Djokovic');
-INSERT INTO public.evento_esportivo VALUES (9, '2026-09-14 23:00:00', 'FINALIZADO', 7, 'Card Principal - Alex Poatan x Israel Adesanya');
-INSERT INTO public.evento_esportivo VALUES (10, '2026-11-08 14:00:00', 'AGENDADO', 8, 'Grand Prix de Sao Paulo (Interlagos)');
-INSERT INTO public.evento_esportivo VALUES (11, '2026-10-28 17:00:00', 'AGENDADO', 9, 'Grande Final Major - Furia Esports x Natus Vincere');
-INSERT INTO public.evento_esportivo VALUES (12, '2026-10-12 19:30:00', 'AGENDADO', 6, 'Semifinal - Sada Cruzeiro x Minas Volei');
-INSERT INTO public.evento_esportivo VALUES (13, '2026-10-15 16:00:00', 'AGENDADO', 10, 'Fase de Grupos - All Blacks x Springboks');
+COPY public.evento_esportivo (codevento, data_hora, status, codcompeticao, descricao) FROM stdin;
+1	2026-10-15 16:00:00	AGENDADO	1	Rodada 26 - Flamengo x Palmeiras
+2	2026-09-13 18:30:00	FINALIZADO	1	Rodada 25 - Corinthians x Sao Paulo
+3	2026-10-20 16:00:00	AGENDADO	2	Fase de Grupos - Real Madrid x Manchester City
+4	2026-10-21 16:00:00	AGENDADO	2	Fase de Grupos - PSG x Bayern de Munique
+5	2026-09-25 20:00:00	FINALIZADO	3	Oitavas de Final - Gremio x Internacional
+6	2026-11-05 21:00:00	AGENDADO	4	Temporada Regular - Lakers x Celtics
+7	2026-09-10 21:00:00	FINALIZADO	4	Temporada Regular - Warriors x Bulls
+8	2026-10-18 14:00:00	AGENDADO	5	Final Masculina - Carlos Alcaraz x Novak Djokovic
+9	2026-09-14 23:00:00	FINALIZADO	7	Card Principal - Alex Poatan x Israel Adesanya
+10	2026-11-08 14:00:00	AGENDADO	8	Grand Prix de Sao Paulo (Interlagos)
+11	2026-10-28 17:00:00	AGENDADO	9	Grande Final Major - Furia Esports x Natus Vincere
+12	2026-10-12 19:30:00	AGENDADO	6	Semifinal - Sada Cruzeiro x Minas Volei
+13	2026-10-15 16:00:00	AGENDADO	10	Fase de Grupos - All Blacks x Springboks
+14	2026-10-01 16:00:00	AGENDADO	2	Real Madrid x Barca
+\.
 
 
 --
 -- Data for Name: item_aposta; Type: TABLE DATA; Schema: public; Owner: -
 --
 
-INSERT INTO public.item_aposta VALUES (2, 2.60, 'PERDIDA', 2, 8);
-INSERT INTO public.item_aposta VALUES (3, 1.70, 'GANHA', 3, 26);
-INSERT INTO public.item_aposta VALUES (4, 2.80, 'GANHA', 3, 10);
-INSERT INTO public.item_aposta VALUES (5, 2.15, 'PENDENTE', 4, 1);
-INSERT INTO public.item_aposta VALUES (6, 2.20, 'PENDENTE', 5, 13);
-INSERT INTO public.item_aposta VALUES (7, 1.75, 'PENDENTE', 5, 22);
-INSERT INTO public.item_aposta VALUES (8, 1.55, 'PENDENTE', 6, 30);
-INSERT INTO public.item_aposta VALUES (9, 2.25, 'PENDENTE', 7, 32);
-INSERT INTO public.item_aposta VALUES (11, 1.85, 'PENDENTE', 9, 18);
-INSERT INTO public.item_aposta VALUES (12, 1.65, 'PENDENTE', 9, 16);
-INSERT INTO public.item_aposta VALUES (13, 3.40, 'CANCELADA', 10, 3);
-INSERT INTO public.item_aposta VALUES (10, 1.85, 'CANCELADA', 8, 4);
-INSERT INTO public.item_aposta VALUES (14, 2.15, 'PENDENTE', 11, 1);
-INSERT INTO public.item_aposta VALUES (15, 3.30, 'PENDENTE', 11, 2);
-INSERT INTO public.item_aposta VALUES (16, 3.30, 'PENDENTE', 12, 2);
-INSERT INTO public.item_aposta VALUES (17, 2.15, 'PENDENTE', 13, 1);
-INSERT INTO public.item_aposta VALUES (18, 1.85, 'PENDENTE', 13, 18);
-INSERT INTO public.item_aposta VALUES (19, 1.95, 'PENDENTE', 14, 5);
-INSERT INTO public.item_aposta VALUES (20, 1.85, 'PENDENTE', 14, 18);
-INSERT INTO public.item_aposta VALUES (1, 1.85, 'PERDIDA', 1, 28);
-INSERT INTO public.item_aposta VALUES (21, 1.55, 'PENDENTE', 15, 30);
-INSERT INTO public.item_aposta VALUES (22, 3.10, 'PENDENTE', 15, 15);
+COPY public.item_aposta (coditem, oddcadastrada, resultado, codaposta, codopcao) FROM stdin;
+2	2.60	PERDIDA	2	8
+3	1.70	GANHA	3	26
+4	2.80	GANHA	3	10
+5	2.15	PENDENTE	4	1
+6	2.20	PENDENTE	5	13
+7	1.75	PENDENTE	5	22
+8	1.55	PENDENTE	6	30
+9	2.25	PENDENTE	7	32
+11	1.85	PENDENTE	9	18
+12	1.65	PENDENTE	9	16
+10	1.85	CANCELADA	8	4
+14	2.15	PENDENTE	11	1
+15	3.30	PENDENTE	11	2
+16	3.30	PENDENTE	12	2
+17	2.15	PENDENTE	13	1
+18	1.85	PENDENTE	13	18
+19	1.95	PENDENTE	14	5
+20	1.85	PENDENTE	14	18
+21	1.55	PENDENTE	15	30
+22	3.10	PENDENTE	15	15
+23	2.15	PENDENTE	16	1
+24	2.15	PENDENTE	17	1
+25	1.75	PENDENTE	17	6
+13	3.40	PERDIDA	10	3
+26	2.20	PENDENTE	18	13
+27	1.60	PENDENTE	19	39
+28	1.65	GANHA	20	46
+\.
 
 
 --
 -- Data for Name: mercado; Type: TABLE DATA; Schema: public; Owner: -
 --
 
-INSERT INTO public.mercado VALUES (1, 'ABERTO', 'Vencedor da Partida (1X2)', 1);
-INSERT INTO public.mercado VALUES (2, 'ABERTO', 'Total de Gols (Mais/Menos 2.5)', 1);
-INSERT INTO public.mercado VALUES (3, 'ABERTO', 'Ambas as Equipes Marcam', 1);
-INSERT INTO public.mercado VALUES (4, 'FECHADO', 'Vencedor da Partida (1X2)', 2);
-INSERT INTO public.mercado VALUES (5, 'FECHADO', 'Total de Gols (Mais/Menos 2.5)', 2);
-INSERT INTO public.mercado VALUES (6, 'ABERTO', 'Vencedor da Partida (1X2)', 3);
-INSERT INTO public.mercado VALUES (7, 'ABERTO', 'Total de Gols (Mais/Menos 2.5)', 3);
-INSERT INTO public.mercado VALUES (8, 'ABERTO', 'Vencedor da Partida', 6);
-INSERT INTO public.mercado VALUES (9, 'ABERTO', 'Total de Pontos (Mais/Menos 220.5)', 6);
-INSERT INTO public.mercado VALUES (10, 'ABERTO', 'Vencedor da Partida', 8);
-INSERT INTO public.mercado VALUES (11, 'ABERTO', 'Total de Sets (Mais/Menos 3.5)', 8);
-INSERT INTO public.mercado VALUES (12, 'FECHADO', 'Vencedor da Luta', 9);
-INSERT INTO public.mercado VALUES (13, 'FECHADO', 'Metodo da Vitoria (KO / Decisao)', 9);
-INSERT INTO public.mercado VALUES (14, 'ABERTO', 'Vencedor do GP de F1', 10);
-INSERT INTO public.mercado VALUES (15, 'ABERTO', 'Vencedor do Confronto (MD3)', 11);
-INSERT INTO public.mercado VALUES (16, 'ABERTO', 'Total de Mapas (Mais/Menos 2.5)', 11);
+COPY public.mercado (codmercado, status, tipo, codevento) FROM stdin;
+1	ABERTO	Vencedor da Partida (1X2)	1
+2	ABERTO	Total de Gols (Mais/Menos 2.5)	1
+3	ABERTO	Ambas as Equipes Marcam	1
+4	FECHADO	Vencedor da Partida (1X2)	2
+5	FECHADO	Total de Gols (Mais/Menos 2.5)	2
+6	ABERTO	Vencedor da Partida (1X2)	3
+7	ABERTO	Total de Gols (Mais/Menos 2.5)	3
+8	ABERTO	Vencedor da Partida	6
+9	ABERTO	Total de Pontos (Mais/Menos 220.5)	6
+10	ABERTO	Vencedor da Partida	8
+11	ABERTO	Total de Sets (Mais/Menos 3.5)	8
+12	FECHADO	Vencedor da Luta	9
+13	FECHADO	Metodo da Vitoria (KO / Decisao)	9
+14	ABERTO	Vencedor do GP de F1	10
+15	ABERTO	Vencedor do Confronto (MD3)	11
+16	ABERTO	Total de Mapas (Mais/Menos 2.5)	11
+18	ABERTO	Real Madrid Ganha	14
+\.
 
 
 --
 -- Data for Name: opcao_aposta; Type: TABLE DATA; Schema: public; Owner: -
 --
 
-INSERT INTO public.opcao_aposta VALUES (1, 'Flamengo Vence', 2.15, 'Vitoria do Flamengo no tempo normal', 1);
-INSERT INTO public.opcao_aposta VALUES (2, 'Empate', 3.30, 'Empate no tempo normal', 1);
-INSERT INTO public.opcao_aposta VALUES (3, 'Palmeiras Vence', 3.40, 'Vitoria do Palmeiras no tempo normal', 1);
-INSERT INTO public.opcao_aposta VALUES (4, 'Mais de 2.5 Gols', 1.85, 'Partida com 3 ou mais gols marcados', 2);
-INSERT INTO public.opcao_aposta VALUES (5, 'Menos de 2.5 Gols', 1.95, 'Partida com 2 gols ou menos marcados', 2);
-INSERT INTO public.opcao_aposta VALUES (6, 'Sim (Ambas Marcam)', 1.75, 'Flamengo e Palmeiras marcam ao menos 1 gol', 3);
-INSERT INTO public.opcao_aposta VALUES (7, 'Nao (Ambas Marcam)', 2.05, 'Pelo menos uma equipe termina sem marcar', 3);
-INSERT INTO public.opcao_aposta VALUES (8, 'Corinthians Vence', 2.60, 'Vitoria do Corinthians', 4);
-INSERT INTO public.opcao_aposta VALUES (9, 'Empate', 3.10, 'Empate classico', 4);
-INSERT INTO public.opcao_aposta VALUES (10, 'Sao Paulo Vence', 2.80, 'Vitoria do Sao Paulo', 4);
-INSERT INTO public.opcao_aposta VALUES (11, 'Mais de 2.5 Gols', 2.10, 'Jogo com mais de 2 gols', 5);
-INSERT INTO public.opcao_aposta VALUES (12, 'Menos de 2.5 Gols', 1.70, 'Jogo com menos de 3 gols', 5);
-INSERT INTO public.opcao_aposta VALUES (13, 'Real Madrid Vence', 2.20, 'Vitoria do Real Madrid no Santiago Bernabeu', 6);
-INSERT INTO public.opcao_aposta VALUES (14, 'Empate', 3.60, 'Empate no jogo de ida', 6);
-INSERT INTO public.opcao_aposta VALUES (15, 'Manchester City Vence', 3.10, 'Vitoria do Manchester City', 6);
-INSERT INTO public.opcao_aposta VALUES (16, 'Mais de 2.5 Gols', 1.65, 'Partida ofensiva com 3 ou mais gols', 7);
-INSERT INTO public.opcao_aposta VALUES (17, 'Menos de 2.5 Gols', 2.25, 'Partida truncada com ate 2 gols', 7);
-INSERT INTO public.opcao_aposta VALUES (18, 'Los Angeles Lakers Vence', 1.85, 'Vitoria dos Lakers em casa', 8);
-INSERT INTO public.opcao_aposta VALUES (19, 'Boston Celtics Vence', 1.95, 'Vitoria dos Celtics fora de casa', 8);
-INSERT INTO public.opcao_aposta VALUES (20, 'Mais de 220.5 Pontos', 1.90, 'Placar combinado superior a 220 pontos', 9);
-INSERT INTO public.opcao_aposta VALUES (21, 'Menos de 220.5 Pontos', 1.90, 'Placar combinado ate 220 pontos', 9);
-INSERT INTO public.opcao_aposta VALUES (22, 'Carlos Alcaraz Campeao', 1.75, 'Vitoria de Carlos Alcaraz', 10);
-INSERT INTO public.opcao_aposta VALUES (23, 'Novak Djokovic Campeao', 2.10, 'Vitoria de Novak Djokovic', 10);
-INSERT INTO public.opcao_aposta VALUES (24, 'Mais de 3.5 Sets', 1.80, 'Jogo decidido em 4 ou 5 sets', 11);
-INSERT INTO public.opcao_aposta VALUES (25, 'Menos de 3.5 Sets', 2.00, 'Jogo decidido em sets diretos (3x0)', 11);
-INSERT INTO public.opcao_aposta VALUES (26, 'Alex Poatan Vence', 1.70, 'Vitoria de Alex Poatan', 12);
-INSERT INTO public.opcao_aposta VALUES (27, 'Israel Adesanya Vence', 2.15, 'Vitoria de Israel Adesanya', 12);
-INSERT INTO public.opcao_aposta VALUES (28, 'Vitoria por Nocaute (KO/TKO)', 1.85, 'Fim por nocaute em qualquer round', 13);
-INSERT INTO public.opcao_aposta VALUES (29, 'Vitoria por Decisao dos Juizes', 3.20, 'Luta ate o 5o round', 13);
-INSERT INTO public.opcao_aposta VALUES (30, 'Max Verstappen Vencedor', 1.55, 'Vitoria de Max Verstappen em Interlagos', 14);
-INSERT INTO public.opcao_aposta VALUES (31, 'Lewis Hamilton Vencedor', 4.50, 'Vitoria de Lewis Hamilton em Interlagos', 14);
-INSERT INTO public.opcao_aposta VALUES (32, 'Furia Esports Vence', 2.25, 'Vitoria brasileira no Major de CS', 15);
-INSERT INTO public.opcao_aposta VALUES (33, 'Natus Vincere Vence', 1.65, 'Vitoria da NaVi no Major de CS', 15);
-INSERT INTO public.opcao_aposta VALUES (34, 'Mais de 2.5 Mapas', 1.90, 'Confronto vai ao 3o mapa decisivo', 16);
-INSERT INTO public.opcao_aposta VALUES (35, 'Menos de 2.5 Mapas', 1.90, 'Vitoria por 2 a 0 em mapas', 16);
-INSERT INTO public.opcao_aposta VALUES (36, 'Real Madrid Vence', 2.50, 'Partido de UCL', 4);
+COPY public.opcao_aposta (codopcao, resultado, odd, descricao, codmercado) FROM stdin;
+1	Flamengo Vence	2.15	Vitoria do Flamengo no tempo normal	1
+2	Empate	3.30	Empate no tempo normal	1
+3	Palmeiras Vence	3.40	Vitoria do Palmeiras no tempo normal	1
+4	Mais de 2.5 Gols	1.85	Partida com 3 ou mais gols marcados	2
+5	Menos de 2.5 Gols	1.95	Partida com 2 gols ou menos marcados	2
+6	Sim (Ambas Marcam)	1.75	Flamengo e Palmeiras marcam ao menos 1 gol	3
+7	Nao (Ambas Marcam)	2.05	Pelo menos uma equipe termina sem marcar	3
+8	Corinthians Vence	2.60	Vitoria do Corinthians	4
+9	Empate	3.10	Empate classico	4
+10	Sao Paulo Vence	2.80	Vitoria do Sao Paulo	4
+11	Mais de 2.5 Gols	2.10	Jogo com mais de 2 gols	5
+12	Menos de 2.5 Gols	1.70	Jogo com menos de 3 gols	5
+13	Real Madrid Vence	2.20	Vitoria do Real Madrid no Santiago Bernabeu	6
+14	Empate	3.60	Empate no jogo de ida	6
+15	Manchester City Vence	3.10	Vitoria do Manchester City	6
+16	Mais de 2.5 Gols	1.65	Partida ofensiva com 3 ou mais gols	7
+17	Menos de 2.5 Gols	2.25	Partida truncada com ate 2 gols	7
+18	Los Angeles Lakers Vence	1.85	Vitoria dos Lakers em casa	8
+19	Boston Celtics Vence	1.95	Vitoria dos Celtics fora de casa	8
+20	Mais de 220.5 Pontos	1.90	Placar combinado superior a 220 pontos	9
+21	Menos de 220.5 Pontos	1.90	Placar combinado ate 220 pontos	9
+22	Carlos Alcaraz Campeao	1.75	Vitoria de Carlos Alcaraz	10
+23	Novak Djokovic Campeao	2.10	Vitoria de Novak Djokovic	10
+24	Mais de 3.5 Sets	1.80	Jogo decidido em 4 ou 5 sets	11
+25	Menos de 3.5 Sets	2.00	Jogo decidido em sets diretos (3x0)	11
+26	Alex Poatan Vence	1.70	Vitoria de Alex Poatan	12
+27	Israel Adesanya Vence	2.15	Vitoria de Israel Adesanya	12
+28	Vitoria por Nocaute (KO/TKO)	1.85	Fim por nocaute em qualquer round	13
+29	Vitoria por Decisao dos Juizes	3.20	Luta ate o 5o round	13
+30	Max Verstappen Vencedor	1.55	Vitoria de Max Verstappen em Interlagos	14
+31	Lewis Hamilton Vencedor	4.50	Vitoria de Lewis Hamilton em Interlagos	14
+32	Furia Esports Vence	2.25	Vitoria brasileira no Major de CS	15
+33	Natus Vincere Vence	1.65	Vitoria da NaVi no Major de CS	15
+34	Mais de 2.5 Mapas	1.90	Confronto vai ao 3o mapa decisivo	16
+35	Menos de 2.5 Mapas	1.90	Vitoria por 2 a 0 em mapas	16
+36	Real Madrid Vence	2.50	Partido de UCL	4
+39	Real Madrid Ganha	1.60	Semifinal UCL	6
+46	Real Madrid Ganha	1.65	UCL Semifinal	18
+47	Real Madrid Empate	2.00	UCL Semifinal	18
+\.
 
 
 --
 -- Data for Name: participacao; Type: TABLE DATA; Schema: public; Owner: -
 --
 
-INSERT INTO public.participacao VALUES (1, 1);
-INSERT INTO public.participacao VALUES (1, 2);
-INSERT INTO public.participacao VALUES (2, 3);
-INSERT INTO public.participacao VALUES (2, 4);
-INSERT INTO public.participacao VALUES (3, 5);
-INSERT INTO public.participacao VALUES (3, 6);
-INSERT INTO public.participacao VALUES (6, 9);
-INSERT INTO public.participacao VALUES (6, 10);
-INSERT INTO public.participacao VALUES (8, 13);
-INSERT INTO public.participacao VALUES (8, 14);
-INSERT INTO public.participacao VALUES (9, 18);
-INSERT INTO public.participacao VALUES (9, 19);
-INSERT INTO public.participacao VALUES (10, 21);
-INSERT INTO public.participacao VALUES (10, 22);
-INSERT INTO public.participacao VALUES (11, 23);
-INSERT INTO public.participacao VALUES (11, 24);
-INSERT INTO public.participacao VALUES (1, 24);
-INSERT INTO public.participacao VALUES (3, 25);
-INSERT INTO public.participacao VALUES (1, 22);
-INSERT INTO public.participacao VALUES (13, 1);
-INSERT INTO public.participacao VALUES (13, 2);
-INSERT INTO public.participacao VALUES (13, 3);
-INSERT INTO public.participacao VALUES (13, 4);
-INSERT INTO public.participacao VALUES (13, 5);
-INSERT INTO public.participacao VALUES (13, 6);
-INSERT INTO public.participacao VALUES (13, 7);
-INSERT INTO public.participacao VALUES (13, 8);
-INSERT INTO public.participacao VALUES (13, 9);
-INSERT INTO public.participacao VALUES (13, 10);
-INSERT INTO public.participacao VALUES (13, 11);
-INSERT INTO public.participacao VALUES (13, 12);
-INSERT INTO public.participacao VALUES (13, 13);
-INSERT INTO public.participacao VALUES (13, 14);
-INSERT INTO public.participacao VALUES (13, 15);
-INSERT INTO public.participacao VALUES (10, 1);
-INSERT INTO public.participacao VALUES (10, 2);
-INSERT INTO public.participacao VALUES (10, 3);
+COPY public.participacao (codevento, codcompetidor) FROM stdin;
+1	1
+1	2
+2	3
+2	4
+3	5
+3	6
+6	9
+6	10
+8	13
+8	14
+9	18
+9	19
+10	21
+10	22
+11	23
+11	24
+4	8
+4	7
+5	26
+5	27
+7	11
+7	12
+12	16
+12	17
+13	28
+13	29
+14	5
+14	30
+\.
 
 
 --
 -- Data for Name: usuario; Type: TABLE DATA; Schema: public; Owner: -
 --
 
-INSERT INTO public.usuario VALUES (1, 'Carlos Silva', 'carlos.silva@email.com', '$2b$10$hashfake1', '2026-08-01 10:00:00', 'ATIVO');
-INSERT INTO public.usuario VALUES (2, 'Ana Beatriz Souza', 'ana.souza@email.com', '$2b$10$hashfake2', '2026-08-05 11:30:00', 'ATIVO');
-INSERT INTO public.usuario VALUES (3, 'Joao Pereira', 'joao.pereira@email.com', '$2b$10$hashfake3', '2026-08-10 14:15:00', 'ATIVO');
-INSERT INTO public.usuario VALUES (4, 'Mariana Costa', 'mariana.costa@email.com', '$2b$10$hashfake4', '2026-08-12 16:45:00', 'BLOQUEADO');
-INSERT INTO public.usuario VALUES (5, 'Pedro Almeida', 'pedro.almeida@email.com', '$2b$10$hashfake5', '2026-08-15 09:20:00', 'ATIVO');
-INSERT INTO public.usuario VALUES (6, 'Fernanda Lima', 'fernanda.lima@email.com', '$2b$10$hashfake6', '2026-08-18 18:00:00', 'ATIVO');
-INSERT INTO public.usuario VALUES (7, 'Rafael Santos', 'rafael.santos@email.com', '$2b$10$hashfake7', '2026-08-20 20:10:00', 'ATIVO');
-INSERT INTO public.usuario VALUES (8, 'Juliana Oliveira', 'juliana.oliveira@email.com', '$2b$10$hashfake8', '2026-08-22 13:50:00', 'INATIVO');
-INSERT INTO public.usuario VALUES (9, 'Bruno Ferreira', 'bruno.ferreira@email.com', '$2b$10$hashfake9', '2026-08-25 15:30:00', 'ATIVO');
-INSERT INTO public.usuario VALUES (10, 'Camila Rodrigues', 'camila.rodrigues@email.com', '$2b$10$hashfake10', '2026-08-28 17:00:00', 'ATIVO');
-INSERT INTO public.usuario VALUES (11, 'Lucas Martins', 'lucas.martins@email.com', '$2b$10$hashfake11', '2026-09-01 10:00:00', 'ATIVO');
-INSERT INTO public.usuario VALUES (12, 'Beatriz Carvalho', 'beatriz.carvalho@email.com', '$2b$10$hashfake12', '2026-09-02 12:00:00', 'BLOQUEADO');
-INSERT INTO public.usuario VALUES (13, 'Thiago Gomes', 'thiago.gomes@email.com', '$2b$10$hashfake13', '2026-09-03 14:00:00', 'ATIVO');
-INSERT INTO public.usuario VALUES (14, 'Larissa Ribeiro', 'larissa.ribeiro@email.com', '$2b$10$hashfake14', '2026-09-04 15:30:00', 'ATIVO');
-INSERT INTO public.usuario VALUES (15, 'Diego Barbosa', 'diego.barbosa@email.com', '$2b$10$hashfake15', '2026-09-05 16:45:00', 'ATIVO');
+COPY public.usuario (codusuario, nome, email, senha, data_cadastro, status) FROM stdin;
+1	Carlos Silva	carlos.silva@email.com	$2b$10$hashfake1	2026-08-01 10:00:00	ATIVO
+2	Ana Beatriz Souza	ana.souza@email.com	$2b$10$hashfake2	2026-08-05 11:30:00	ATIVO
+3	Joao Pereira	joao.pereira@email.com	$2b$10$hashfake3	2026-08-10 14:15:00	ATIVO
+4	Mariana Costa	mariana.costa@email.com	$2b$10$hashfake4	2026-08-12 16:45:00	BLOQUEADO
+5	Pedro Almeida	pedro.almeida@email.com	$2b$10$hashfake5	2026-08-15 09:20:00	ATIVO
+6	Fernanda Lima	fernanda.lima@email.com	$2b$10$hashfake6	2026-08-18 18:00:00	ATIVO
+7	Rafael Santos	rafael.santos@email.com	$2b$10$hashfake7	2026-08-20 20:10:00	ATIVO
+8	Juliana Oliveira	juliana.oliveira@email.com	$2b$10$hashfake8	2026-08-22 13:50:00	INATIVO
+9	Bruno Ferreira	bruno.ferreira@email.com	$2b$10$hashfake9	2026-08-25 15:30:00	ATIVO
+10	Camila Rodrigues	camila.rodrigues@email.com	$2b$10$hashfake10	2026-08-28 17:00:00	ATIVO
+11	Lucas Martins	lucas.martins@email.com	$2b$10$hashfake11	2026-09-01 10:00:00	ATIVO
+12	Beatriz Carvalho	beatriz.carvalho@email.com	$2b$10$hashfake12	2026-09-02 12:00:00	BLOQUEADO
+13	Thiago Gomes	thiago.gomes@email.com	$2b$10$hashfake13	2026-09-03 14:00:00	ATIVO
+14	Larissa Ribeiro	larissa.ribeiro@email.com	$2b$10$hashfake14	2026-09-04 15:30:00	ATIVO
+15	Diego Barbosa	diego.barbosa@email.com	$2b$10$hashfake15	2026-09-05 16:45:00	ATIVO
+\.
 
 
 --
 -- Name: aposta_codaposta_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.aposta_codaposta_seq', 15, true);
+SELECT pg_catalog.setval('public.aposta_codaposta_seq', 20, true);
 
 
 --
@@ -727,7 +757,7 @@ SELECT pg_catalog.setval('public.competicao_codcompeticao_seq', 10, true);
 -- Name: competidor_codcompetidor_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.competidor_codcompetidor_seq', 25, true);
+SELECT pg_catalog.setval('public.competidor_codcompetidor_seq', 30, true);
 
 
 --
@@ -741,28 +771,28 @@ SELECT pg_catalog.setval('public.esporte_codesporte_seq', 9, true);
 -- Name: evento_esportivo_codevento_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.evento_esportivo_codevento_seq', 13, true);
+SELECT pg_catalog.setval('public.evento_esportivo_codevento_seq', 14, true);
 
 
 --
 -- Name: item_aposta_coditem_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.item_aposta_coditem_seq', 22, true);
+SELECT pg_catalog.setval('public.item_aposta_coditem_seq', 28, true);
 
 
 --
 -- Name: mercado_codmercado_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.mercado_codmercado_seq', 17, true);
+SELECT pg_catalog.setval('public.mercado_codmercado_seq', 18, true);
 
 
 --
 -- Name: opcao_aposta_codopcao_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.opcao_aposta_codopcao_seq', 36, true);
+SELECT pg_catalog.setval('public.opcao_aposta_codopcao_seq', 47, true);
 
 
 --
@@ -993,5 +1023,5 @@ ALTER TABLE ONLY public.participacao
 -- PostgreSQL database dump complete
 --
 
--- \unrestrict pswk0IoKOJblq6ifImM7XOvt4oZbAoDUpkSYaRjPhHdT8jat2asAKwUXdpKBZ0o
+\unrestrict critZmcN1NaBru6urrDysd9fjdP6EVOG3M3lZ887zFaDvjBeF9eOX1wYxhih28T
 
