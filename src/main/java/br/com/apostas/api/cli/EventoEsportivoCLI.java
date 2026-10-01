@@ -3,6 +3,7 @@ package br.com.apostas.api.cli;
 import br.com.apostas.api.model.Competicao;
 import br.com.apostas.api.model.EventoEsportivo;
 import br.com.apostas.api.service.EventoEsportivoService;
+import br.com.apostas.api.util.ConsoleUtils;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
