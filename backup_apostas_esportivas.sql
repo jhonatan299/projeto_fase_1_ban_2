@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict lrrWUnmL2ydiSdeNfmAJ208f4sa2uHZsgxztlMzn81qdXpxSTBhaUaeEKM78FpW
+\restrict K4Ygw7ESv2xfmcul5lEchhNFXdby9NArBmQ6p1sKwkaVBO7w5GDrPvBFFj0fTue
 
 -- Dumped from database version 18.6
 -- Dumped by pg_dump version 18.6
@@ -464,17 +464,7 @@ COPY public.aposta (codaposta, status, data_hora, valor, valor_retorno, codusuar
 7	PENDENTE	2026-10-04 11:15:00	100.00	\N	9
 9	PENDENTE	2026-10-05 18:00:00	50.00	\N	11
 8	CANCELADA	2026-10-04 16:30:00	60.00	60.00	10
-11	PENDENTE	2026-09-21 04:28:00.832785	10.00	\N	1
-12	PENDENTE	2026-09-21 04:29:06.55661	10.00	\N	2
-13	PENDENTE	2026-09-21 04:41:53.594029	50.00	\N	1
-14	PENDENTE	2026-09-21 05:39:46.64972	11.00	\N	1
-15	PENDENTE	2026-09-21 06:36:42.123473	10.00	\N	1
-16	PENDENTE	2026-09-29 22:19:11.276129	10.00	\N	1
-17	PENDENTE	2026-09-29 23:14:33.919736	10.00	\N	1
 10	PERDIDA	2026-09-20 12:00:00	100.00	0.00	13
-18	PENDENTE	2026-10-01 13:28:45.10795	10.00	\N	1
-19	PENDENTE	2026-10-01 13:38:28.078853	19.00	\N	1
-20	GANHA	2026-10-01 14:24:45.342428	15.00	24.75	1
 \.
 
 
@@ -525,7 +515,6 @@ COPY public.competidor (codcompetidor, nome, tipo) FROM stdin;
 22	Lewis Hamilton	INDIVIDUAL
 23	Furia Esports	TIME
 24	Natus Vincere	TIME
-25	Jhonatan	INDIVIDUAL
 26	Gremio	TIME
 27	Internacional	TIME
 28	All Blacks	TIME
@@ -589,22 +578,7 @@ COPY public.item_aposta (coditem, oddcadastrada, resultado, codaposta, codopcao)
 11	1.85	PENDENTE	9	18
 12	1.65	PENDENTE	9	16
 10	1.85	CANCELADA	8	4
-14	2.15	PENDENTE	11	1
-15	3.30	PENDENTE	11	2
-16	3.30	PENDENTE	12	2
-17	2.15	PENDENTE	13	1
-18	1.85	PENDENTE	13	18
-19	1.95	PENDENTE	14	5
-20	1.85	PENDENTE	14	18
-21	1.55	PENDENTE	15	30
-22	3.10	PENDENTE	15	15
-23	2.15	PENDENTE	16	1
-24	2.15	PENDENTE	17	1
-25	1.75	PENDENTE	17	6
 13	3.40	PERDIDA	10	3
-26	2.20	PENDENTE	18	13
-27	1.60	PENDENTE	19	39
-28	1.65	GANHA	20	46
 \.
 
 
@@ -629,7 +603,6 @@ COPY public.mercado (codmercado, status, tipo, codevento) FROM stdin;
 14	ABERTO	Vencedor do GP de F1	10
 15	ABERTO	Vencedor do Confronto (MD3)	11
 16	ABERTO	Total de Mapas (Mais/Menos 2.5)	11
-18	ABERTO	Real Madrid Ganha	14
 \.
 
 
@@ -673,10 +646,6 @@ COPY public.opcao_aposta (codopcao, resultado, odd, descricao, codmercado) FROM 
 33	Natus Vincere Vence	1.65	Vitoria da NaVi no Major de CS	15
 34	Mais de 2.5 Mapas	1.90	Confronto vai ao 3o mapa decisivo	16
 35	Menos de 2.5 Mapas	1.90	Vitoria por 2 a 0 em mapas	16
-36	Real Madrid Vence	2.50	Partido de UCL	4
-39	Real Madrid Ganha	1.60	Semifinal UCL	6
-46	Real Madrid Ganha	1.65	UCL Semifinal	18
-48	Real Madrid Empate	2.00	UCL Semifinal	18
 \.
 
 
@@ -741,7 +710,7 @@ COPY public.usuario (codusuario, nome, email, senha, data_cadastro, status) FROM
 -- Name: aposta_codaposta_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.aposta_codaposta_seq', 20, true);
+SELECT pg_catalog.setval('public.aposta_codaposta_seq', 10, true);
 
 
 --
@@ -755,7 +724,7 @@ SELECT pg_catalog.setval('public.competicao_codcompeticao_seq', 10, true);
 -- Name: competidor_codcompetidor_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.competidor_codcompetidor_seq', 31, true);
+SELECT pg_catalog.setval('public.competidor_codcompetidor_seq', 30, true);
 
 
 --
@@ -776,21 +745,21 @@ SELECT pg_catalog.setval('public.evento_esportivo_codevento_seq', 14, true);
 -- Name: item_aposta_coditem_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.item_aposta_coditem_seq', 28, true);
+SELECT pg_catalog.setval('public.item_aposta_coditem_seq', 13, true);
 
 
 --
 -- Name: mercado_codmercado_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.mercado_codmercado_seq', 18, true);
+SELECT pg_catalog.setval('public.mercado_codmercado_seq', 16, true);
 
 
 --
 -- Name: opcao_aposta_codopcao_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.opcao_aposta_codopcao_seq', 48, true);
+SELECT pg_catalog.setval('public.opcao_aposta_codopcao_seq', 35, true);
 
 
 --
@@ -1021,5 +990,5 @@ ALTER TABLE ONLY public.participacao
 -- PostgreSQL database dump complete
 --
 
-\unrestrict lrrWUnmL2ydiSdeNfmAJ208f4sa2uHZsgxztlMzn81qdXpxSTBhaUaeEKM78FpW
+\unrestrict K4Ygw7ESv2xfmcul5lEchhNFXdby9NArBmQ6p1sKwkaVBO7w5GDrPvBFFj0fTue
 
